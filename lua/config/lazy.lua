@@ -32,7 +32,12 @@ require("lazy").setup({
 	-- { "rose-pine/neovim", name = "rose-pine" },
 	-- install = { colorscheme = { "rose-pine" } },
 	-- automatically check for plugin updates
-	checker = { enabled = true },
-	"nvim-lua/plenary.nvim",
+	checker = {
+        enabled = true,
+        notify = false,
+    },
+    change_detection = {
+        notify = false,
+    },
 })
 
