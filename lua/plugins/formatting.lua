@@ -17,6 +17,10 @@ return {
 				markdown = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+				r = { "styler" },
+				rust = { "rustfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

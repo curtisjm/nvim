@@ -3,6 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local lint = require("lint")
+		local pylint = lint.linters.pylint
 
 		lint.linters_by_ft = {
 			javascript = { "eslint_d" },
@@ -25,5 +26,16 @@ return {
 		vim.keymap.set("n", "<leader>l", function()
 			lint.try_lint()
 		end, { desc = "Trigger linting for current file" })
+
+		pylint.args = {
+			"-f",
+			"json",
+			"--from-stdin",
+			function()
+				return vim.api.nvim_buf_get_name(0)
+			end,
+			"-d",
+			"C0114,C0115,C0116",
+		}
 	end,
 }
