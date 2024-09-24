@@ -35,7 +35,7 @@ return {
 				return vim.api.nvim_buf_get_name(0)
 			end,
 			"-d",
-			"C0114,C0115,C0116",
+			"C0114,C0115,C0116,W0105",
 		}
 	end,
 }
