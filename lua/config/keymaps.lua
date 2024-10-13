@@ -31,3 +31,18 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Delete without overwriting current buffer
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
+-- Remove LazyVIM UI mappings
+vim.keymap.set("n", "<leader>uf", "<Nop>")
+vim.keymap.set("n", "<leader>uF", "<Nop>")
+vim.keymap.set("n", "<leader>us", "<Nop>")
+vim.keymap.set("n", "<leader>uw", "<Nop>")
+vim.keymap.set("n", "<leader>uL", "<Nop>")
+vim.keymap.set("n", "<leader>ud", "<Nop>")
+vim.keymap.set("n", "<leader>ul", "<Nop>")
+vim.keymap.set("n", "<leader>uc", "<Nop>")
+vim.keymap.set("n", "<leader>uT", "<Nop>")
+vim.keymap.set("n", "<leader>ub", "<Nop>")
+if vim.lsp.inlay_hint then
+	vim.keymap.set("n", "<leader>uh", "<Nop>")
+end

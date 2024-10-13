@@ -25,12 +25,19 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.tex" },
 		{ import = "lazyvim.plugins.extras.lang.r" },
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
+		{ import = "lazyvim.plugins.extras.lang.clangd" },
 
-		-- Plugins:
+		-- Editor:
 		{ import = "lazyvim.plugins.extras.editor.harpoon2" },
+
+		-- Coding:
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
+		{ import = "lazyvim.plugins.extras.coding.copilot-chat" },
+
+		-- UI:
 		{ import = "lazyvim.plugins.extras.ui.treesitter-context" },
 
+		-- Plugins directory:
 		{ import = "plugins" },
 	},
 	defaults = {
